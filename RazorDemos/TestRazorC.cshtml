@@ -1,0 +1,33 @@
+﻿@{
+    var scoreList = new int[] { 100, 50, 90, 60, 75 };
+}
+
+@{
+    ViewBag.Title = "TestRazor";
+}
+
+<style>
+    .fail {
+        color: darkred;
+    }
+</style>
+
+<h2>TestRazor C (Helper)</h2>
+
+@helper DisplayScore (int score) {
+    if (score >= 60) {
+            <li>@score</li>
+    }
+    else {
+            <li class="fail">@score</li>
+    }
+}
+
+<ul>
+    @{
+        foreach (int score in scoreList) {
+            @DisplayScore(score)
+        }
+    }
+
+</ul>

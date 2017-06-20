@@ -1,0 +1,29 @@
+﻿@{
+    var scoreList = new int[] { 100, 50, 90, 60, 75 };
+}
+
+@{
+    ViewBag.Title = "TestRazor";
+}
+
+<style>
+    .fail {
+        color: darkred;
+    }
+</style>
+
+<h2>TestRazor B</h2>
+
+<ul>
+    @{
+        foreach (int score in scoreList) {
+            if (score >= 60) {
+                <li>@score</li>
+            }
+            else { 
+                <li class="fail">@score</li>
+            }
+        }
+    }
+
+</ul>

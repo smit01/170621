@@ -1,0 +1,14 @@
+    public class EmployeeViewModal {
+        public string FirstName { set; get; }
+
+        [Required(ErrorMessage = "You must keyin you last name.")]
+        [DisplayName("Last name:")]
+        public string LastName { set; get; }
+
+        [Range(18, 75)]
+        [DisplayName("Your age")]
+        public int? Age { set; get; }
+
+        [RegularExpression(@"^\d{3}$")]
+        public string Zip { set; get; }
+    }

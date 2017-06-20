@@ -1,0 +1,21 @@
+﻿@{
+    var scoreList = new int[] { 100, 50, 90, 60, 75 };
+}
+
+@{
+    ViewBag.Title = "TestRazor";
+}
+
+<style>
+    .fail {
+        color: darkred;
+    }
+</style>
+
+<h2>TestRazor (InLine)</h2>
+
+<ul>
+    @foreach (int score in scoreList) {
+        <li class="@(score >= 60 ? "" : "fail")">@score</li>
+    }
+</ul>

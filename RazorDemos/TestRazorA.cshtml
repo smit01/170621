@@ -1,0 +1,23 @@
+﻿@{ 
+    var scoreList = new int[] { 100, 50, 90, 60, 75 };
+}
+
+@{
+    ViewBag.Title = "TestRazor";
+}
+
+<style>
+    .fail {
+        color: darkred;
+    }
+</style>
+
+<h2>TestRazor</h2>
+
+<ul>
+    <li>100</li>
+    <li class="fail">50</li>
+    <li>90</li>
+    <li>60</li>
+    <li>75</li>
+</ul>
